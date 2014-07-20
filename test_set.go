@@ -17,11 +17,11 @@ func RunSuite(s interface{}, t *testing.T) {
 	for i := 0; i < numOfTest; i++ {
 		if strings.HasPrefix(st.Method(i).Name, "Test") {
 			if before, ok := st.MethodByName("Before"); ok {
-				before.Func.Call(args[:1])
+				before.Func.Call(args)
 			}
 			st.Method(i).Func.Call(args)
 			if after, ok := st.MethodByName("After"); ok {
-				after.Func.Call(args[:1])
+				after.Func.Call(args)
 			}
 		}
 	}
