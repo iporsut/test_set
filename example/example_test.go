@@ -12,22 +12,22 @@ func TestExampleSuite(t *testing.T) {
 type S struct {
 }
 
-func (s S) Before() {
+func (S) Before() {
 
 }
 
-func (s S) After() {
+func (S) After() {
 
 }
 
-func (s S) TestA(t *testing.T) {
+func (S) TestA(t *testing.T) {
 
 }
 
-func (s S) TestB(t *testing.T) {
+func (S) TestB(t *testing.T) {
 
 }
 
-func (s S) TestC(t *testing.T) {
+func (S) TestC(t *testing.T) {
 
 }
